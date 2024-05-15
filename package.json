@@ -4,7 +4,7 @@
     "description": "This is my Node.js project",
     "main": "index.js",
     "scripts": {
-      "test": "npm test"
+      "test": ""
     },
     "author": "shirisha",
     "license": "ISC",
