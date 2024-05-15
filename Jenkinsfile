@@ -8,7 +8,6 @@ pipeline {
                 checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/sirigithubmenda/Jenkins.git']]])
             }
         }
-    }
         stage('Run Tests') {
             steps {
                 // Run your test suite
@@ -16,4 +15,5 @@ pipeline {
                 sh 'npm test'    // Or any other test running command
             }
         }
+    } 
 }       
