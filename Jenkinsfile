@@ -15,5 +15,11 @@ pipeline {
                 sh 'npm test'    // Or any other test running command
             }
         }
+        stage('Build Container') {
+            steps {
+                // Build your Docker container
+                sh 'docker build -t siridocker-image .'
+            }
+        }
     } 
 }       
