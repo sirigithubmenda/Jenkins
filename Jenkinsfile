@@ -9,4 +9,11 @@ pipeline {
             }
         }
     }
+    stage('Run Tests') {
+            steps {
+                // Run your test suite
+                sh 'npm install' // Or any other test setup command
+                sh 'npm test'    // Or any other test running command
+            }
+        }
 }       
