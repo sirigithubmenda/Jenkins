@@ -9,7 +9,7 @@ pipeline {
             }
         }
     }
-    stage('Run Tests') {
+        stage('Run Tests') {
             steps {
                 // Run your test suite
                 sh 'npm install' // Or any other test setup command
