@@ -31,7 +31,6 @@ pipeline {
                 //    sh 'kubectl config use-context siri-context'
                     sh 'kubectl apply -f deployment.yaml'
                 }
-            }
         }
         
         stage('Demo Scaling') {
