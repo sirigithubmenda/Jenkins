@@ -25,7 +25,7 @@ pipeline {
             steps {
                 // Deploy your container to Kubernetes
                 withCredentials([usernamePassword(credentialsId: 'siri-kube', usernameVariable: 'KUBE_USER', passwordVariable: 'KUBE_PASSWORD')]) {
-                    sh 'kubectl config set-cluster your-cluster-name --server=https://192.168.49.2:8443 --insecure-skip-tls-verify'
+                    sh 'kubectl config set-cluster minikube --server=https://192.168.49.2:8443 --insecure-skip-tls-verify'
                     sh 'kubectl config set-credentials $KUBE_USER --token=$KUBE_PASSWORD'
                     sh 'kubectl config set-context siri-context --cluster=minikube --user=$KUBE_USER'
                     sh 'kubectl config use-context siri-context'
