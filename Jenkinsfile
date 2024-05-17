@@ -25,7 +25,7 @@ pipeline {
             steps {
                 // Deploy your container to Kubernetes
                 sh 'kubectl apply -f deployment.yaml'
-                sh 'kubectl apply -f serviceaccount.yam'
+                sh 'kubectl apply -f serviceaccount.yaml'
             }
         }
         stage('Demo Scaling') {
